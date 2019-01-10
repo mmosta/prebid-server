@@ -81,6 +81,9 @@ adapters:
     xapi:
       username: rubiuser
       password: rubipw23
+  dmx:
+    usersync_url: https://cdn.districtm.io/ids/?sellerid=10024
+    endpoint: https://dmx.districtm.io/b/v2
   brightroll:
     usersync_url: http://test-bh.ybp.yahoo.com/sync/appnexuspbs?gdpr={{.GDPR}}&euconsent={{.GDPRConsent}}&url=%s
     endpoint: http://test-bid.ybp.yahoo.com/bid/appnexuspbs
@@ -184,6 +187,8 @@ func TestFullConfig(t *testing.T) {
 	cmpStrings(t, "adapters.adkerneladn.usersync_url", cfg.Adapters[strings.ToLower(string(openrtb_ext.BidderAdkernelAdn))].UserSyncURL, "https://tag.adkernel.com/syncr?gdpr={{.GDPR}}&gdpr_consent={{.GDPRConsent}}&r=")
 	cmpStrings(t, "adapters.rhythmone.endpoint", cfg.Adapters[string(openrtb_ext.BidderRhythmone)].Endpoint, "http://tag.1rx.io/rmp")
 	cmpStrings(t, "adapters.rhythmone.usersync_url", cfg.Adapters[string(openrtb_ext.BidderRhythmone)].UserSyncURL, "https://sync.1rx.io/usersync2/rmphb?gdpr={{.GDPR}}&gdpr_consent={{.GDPRConsent}}&redir=http%3A%2F%2Fprebid-server.prebid.org%2F%2Fsetuid%3Fbidder%3Drhythmone%26gdpr%3D{{.GDPR}}%26gdpr_consent%3D{{.GDPRConsent}}%26uid%3D%5BRX_UUID%5D")
+	cmpStrings(t, "adapters.dmx.endpoint", cfg.Adapters[string(openrtb_ext.BidderDmx)].Endpoint, "https://dmx.districtm.io/b/v2")
+	cmpStrings(t, "adapters.dmx.usersync_url", cfg.Adapters[string(openrtb_ext.BidderDmx)].UserSyncURL, "https://cdn.districtm.io/ids/?sellerid=10024")
 }
 
 func TestValidConfig(t *testing.T) {

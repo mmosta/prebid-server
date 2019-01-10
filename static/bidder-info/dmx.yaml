@@ -1,0 +1,6 @@
+maintainer:
+  email: "mo@fustat.org"
+capabilities:
+  site:
+    mediaTypes:
+      - banner

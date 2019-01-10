@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "DMX Adapter Params",
+  "description": "A schema which validates params accepted by DMX adapter",
+  "type": "object",
+  "properties": {
+    "memberid": {
+      "type": "integer",
+      "description": "An ID which identifies the publisher selling the impression"
+    },
+    "dmxid": {
+      "type": "integer",
+      "description": "A district m tag ID"
+    }
+  },
+  "required": [
+    "memberid"
+  ]
+}
