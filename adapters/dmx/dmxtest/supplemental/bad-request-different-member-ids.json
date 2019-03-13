@@ -1,0 +1,51 @@
+{
+  "mockBidRequest": {
+    "id": "bad-request-different-member-ids",
+    "imp": [
+      {
+        "id": "impression 1",
+        "ext": {
+          "bidder": {
+            "dmxid": 1234,
+            "memberId": 10000
+          }
+        },
+        "banner": {
+          "format": [
+            {
+              "w": 300,
+              "h": 250
+            }
+          ]
+        }
+      },
+      {
+        "id": "impression 2",
+        "ext": {
+          "bidder": {
+            "dmxid": 1234,
+            "memberId": 10001
+          }
+        },
+        "banner": {
+          "format": [
+            {
+              "w": 300,
+              "h": 250
+            }
+          ]
+        }
+      }
+    ],
+    "site": {
+      "domain": "forbes.com",
+      "page": "http:\/\/forbes.com\/",
+      "ext": {
+        "amp": 0
+      }
+    }
+  },
+  "expectedMakeRequestsErrors": [
+    "All request.imp[i].ext.dmx.memberId params must both exist and match. Request contained: 2"
+  ]
+}

@@ -23,7 +23,7 @@ func (a *DmxAdapter) MakeRequests(request *openrtb.BidRequest) ([]*adapters.Requ
 
 	if len(request.Imp) == 0 {
 		err := &errortypes.BadInput{
-			Message: "Empty BidRerquest.Imp[]",
+			Message: "Empty BidRequest.Imp[]",
 		}
 		errs = append(errs, err)
 		return nil, errs
@@ -46,7 +46,8 @@ func (a *DmxAdapter) MakeRequests(request *openrtb.BidRequest) ([]*adapters.Requ
 	}
 
 	if len(publisherIds) != 1 {
-		errs = append(errs, fmt.Errorf("All request.imp[i].ext.dmx.memberid params must both exist and match. Request contained: %v", len(publisherIds)))
+		errs = append(errs, fmt.Errorf("All request.imp[i].ext.dmx.memberId params must both exist and match. Request contained: %v", len(publisherIds)))
+		return nil, errs
 	}
 
 	if len(request.Imp) == 0 {
@@ -72,7 +73,6 @@ func (a *DmxAdapter) MakeRequests(request *openrtb.BidRequest) ([]*adapters.Requ
 	headers.Add("Content-Type", "application/json;charset=utf-8")
 	headers.Add("Accept", "application/json")
 	headers.Add("x-openrtb-version", "2.5")
-
 
 	if request.Device != nil {
 		addHeaderIfNonEmpty(headers, "User-Agent", request.Device.UA)
@@ -170,7 +170,7 @@ func preprocess(imp *openrtb.Imp) (string, error) {
 
 	if dmxExt.MemberID == 0 {
 		return "", &errortypes.BadInput{
-			Message: "ext.dmx.memberid is missing",
+			Message: "ext.dmx.memberId is missing",
 		}
 	}
 

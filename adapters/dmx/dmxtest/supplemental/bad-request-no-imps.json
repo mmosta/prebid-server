@@ -1,0 +1,7 @@
+{
+  "mockBidRequest": {
+    "id": "bad-no-imp-request-id",
+    "imp": []
+  },
+  "expectedMakeRequestsErrors": ["Empty BidRequest.Imp[]"]
+}
