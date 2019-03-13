@@ -27,9 +27,11 @@ const (
 	BidderAppnexus     BidderName = "appnexus"
 	BidderBeachfront   BidderName = "beachfront"
 	BidderBrightroll   BidderName = "brightroll"
+	BidderConsumable   BidderName = "consumable"
 	BidderConversant   BidderName = "conversant"
 	BidderEPlanning    BidderName = "eplanning"
 	BidderFacebook     BidderName = "audienceNetwork"
+	BidderGamoshi      BidderName = "gamoshi"
 	BidderGrid         BidderName = "grid"
 	BidderGumGum       BidderName = "gumgum"
 	BidderIx           BidderName = "ix"
@@ -41,6 +43,8 @@ const (
 	BidderRubicon      BidderName = "rubicon"
 	BidderSomoaudience BidderName = "somoaudience"
 	BidderSovrn        BidderName = "sovrn"
+	BidderSonobi       BidderName = "sonobi"
+	BidderYieldmo      BidderName = "yieldmo"
 )
 
 // BidderMap stores all the valid OpenRTB 2.x Bidders in the project. This map *must not* be mutated.
@@ -53,8 +57,10 @@ var BidderMap = map[string]BidderName{
 	"beachfront":      BidderBeachfront,
 	"audienceNetwork": BidderFacebook,
 	"brightroll":      BidderBrightroll,
+	"consumable":      BidderConsumable,
 	"conversant":      BidderConversant,
 	"eplanning":       BidderEPlanning,
+	"gamoshi":         BidderGamoshi,
 	"grid":            BidderGrid,
 	"gumgum":          BidderGumGum,
 	"ix":              BidderIx,
@@ -66,6 +72,8 @@ var BidderMap = map[string]BidderName{
 	"rubicon":         BidderRubicon,
 	"somoaudience":    BidderSomoaudience,
 	"sovrn":           BidderSovrn,
+	"sonobi":          BidderSonobi,
+	"yieldmo":         BidderYieldmo,
 }
 
 // BidderList returns the values of the BidderMap
