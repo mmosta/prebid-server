@@ -35,7 +35,7 @@
     }
   },
   "expectedMakeRequestsErrors": [
-    "ext.dmx.memberId is missing",
-    "All request.imp[i].ext.dmx.memberId params must both exist and match. Request contained: 0"
+    "ext.dmx.memberid is missing",
+    "All request.imp[i].ext.dmx.memberid params must both exist and match. Request contained: 0"
   ]
 }

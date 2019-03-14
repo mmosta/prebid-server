@@ -75,48 +75,12 @@
       },
       "mockResponse": {
         "status": 200,
-        "body": {
-          "id": "9da35870-e320-4e9c-a23e-4dc8c2af3e71",
-          "seatbid": [
-            {
-              "bid": [
-                {
-                  "adm": "<DIV STYLE=\"position: absolute; left: 0px; top: 0px; visibility: hidden;\">",
-                  "id": "16-3fd2bd83_1FUU28MinwA0biwpKFY03gGfiOp-1",
-                  "impid": "\/19968336\/header-bid-tag-0",
-                  "price": 0.3954,
-                  "nurl": "http:\/\/dmx.districtm.ca\/n\/v2\/?pi=100001&di=107599&ti=1234&s=16&ii=\/19968336\/header-bid-tag-0&p=${AUCTION_PRICE}&bi=16-3fd2bd83_1FUU28MinwA0biwpKFY03gGfiOp-1&w=300&h=250&b=10009",
-                  "adomain": [
-                    "slack.com"
-                  ],
-                  "cid": "17218906",
-                  "crid": "16_100822737",
-                  "cat": [
-                    "IAB3"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        "body": "not json"
       }
     }
   ],
 
-  "expectedBids": [
-    {
-      "bid": {
-        "id": "16-3fd2bd83_1FUU28MinwA0biwpKFY03gGfiOp-1",
-        "impid": "\/19968336\/header-bid-tag-0",
-        "price": 0.3954,
-        "adm": "<DIV STYLE=\"position: absolute; left: 0px; top: 0px; visibility: hidden;\">",
-        "cid": "17218906",
-        "crid": "16_100822737",
-        "adomain": ["slack.com"],
-        "w": 300,
-        "h": 250
-      },
-      "type": "banner"
-    }
+  "expectedMakeBidsErrors": [
+    "bad server response: unable to parse body"
   ]
 }

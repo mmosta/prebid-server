@@ -1,0 +1,27 @@
+{
+  "mockBidRequest": {
+    "id": "test-no-valid-impressions",
+    "imp": [
+      {
+        "id": "test-imp-id",
+        "video": {
+          "mimes": ["video/mp4"],
+          "protocols": [2, 5],
+          "w": 1024,
+          "h": 576
+        },
+        "ext": {
+          "bidder": {
+            "memberid": 100001,
+            "dmxid": 1234
+          }
+        }
+      }
+    ]
+  },
+
+  "expectedMakeRequestsErrors": [
+    "DMX only supports banners at this stage",
+    "All request.imp[i].ext.dmx.memberid params must both exist and match. Request contained: 0"
+  ]
+}

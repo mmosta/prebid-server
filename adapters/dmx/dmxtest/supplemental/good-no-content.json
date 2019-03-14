@@ -6,7 +6,8 @@
         "id": "\/19968336\/header-bid-tag-0",
         "ext": {
           "bidder": {
-            "memberid": 100001
+            "memberid": 100001,
+            "dmxid": 1234
           }
         },
         "banner": {
@@ -14,6 +15,10 @@
             {
               "w": 300,
               "h": 250
+            },
+            {
+              "w": 300,
+              "h": 600
             }
           ]
         }
@@ -49,11 +54,16 @@
                   {
                     "w": 300,
                     "h": 250
+                  },
+                  {
+                    "w": 300,
+                    "h": 600
                   }
                 ],
                 "w": 300,
                 "h": 250
-              }
+              },
+              "tagid": "1234"
             }
           ],
           "site": {
@@ -63,60 +73,22 @@
               "id": "100001"
             }
           },
+          "at": 1,
           "device": {
             "ip": "71.36.214.234"
           },
           "user": {
             "id": "eyJ0ZW1wVUlEcyI6eyJkbXgiOnsidWlkIjoiZXlKaGJHY2lPaUpGVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnphV1FpT2pFd01EQXlMQ0oxYzNJaU9pSnhaMWxsYzJkWllrMVZXbFJTVlhRMlRWVldUVTU2YUhKU1YzaGFUbFpPZGxrd01VOWtiRkl5WlZad01pSjkuT1lhcnlzd0tEN0ZVUHE5Tm1fek8wWnZhaWx1MVoybDFoWnk2TFpmalVVQjM1NWk2a0dVdkd2R05fWFhhaFEzaUJWSGdlRk9vcTJfMFNNSHBtUDZwdEEiLCJleHBpcmVzIjoiMjAxOS0wMS0yMlQxMDo0ODozMC45NjMxODE4OTQtMDU6MDAifX0sImJkYXkiOiIyMDE5LTAxLTA4VDEwOjQ4OjMwLjk2MzE3MDU4My0wNTowMCJ9",
             "buyeruid": "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaWQiOjEwMDAyLCJ1c3IiOiJxZ1llc2dZYk1VWlRSVXQ2TVVWTU56aHJSV3haTlZOdlkwMU9kbFIyZVZwMiJ9.OYaryswKD7FUPq9Nm_zO0Zvailu1Z2l1hZy6LZfjUUB355i6kGUvGvGN_XXahQ3iBVHgeFOoq2_0SMHpmP6ptA"
-          },
-          "at": 1
+          }
         }
       },
       "mockResponse": {
-        "status": 200,
-        "body": {
-          "id": "9da35870-e320-4e9c-a23e-4dc8c2af3e71",
-          "seatbid": [
-            {
-              "bid": [
-                {
-                  "adm": "<DIV STYLE=\"position: absolute; left: 0px; top: 0px; visibility: hidden;\">",
-                  "id": "16-3fd2bd83_1FUU28MinwA0biwpKFY03gGfiOp-1",
-                  "impid": "\/19968336\/header-bid-tag-0",
-                  "price": 0.3954,
-                  "nurl": "http:\/\/dmx.districtm.ca\/n\/v2\/?pi=100001&di=107599&ti=1234&s=16&ii=\/19968336\/header-bid-tag-0&p=${AUCTION_PRICE}&bi=16-3fd2bd83_1FUU28MinwA0biwpKFY03gGfiOp-1&w=300&h=250&b=10009",
-                  "adomain": [
-                    "slack.com"
-                  ],
-                  "cid": "17218906",
-                  "crid": "16_100822737",
-                  "cat": [
-                    "IAB3"
-                  ]
-                }
-              ]
-            }
-          ]
-        }
+        "status": 204,
+        "body": {}
       }
     }
   ],
 
-  "expectedBids": [
-    {
-      "bid": {
-        "id": "16-3fd2bd83_1FUU28MinwA0biwpKFY03gGfiOp-1",
-        "impid": "\/19968336\/header-bid-tag-0",
-        "price": 0.3954,
-        "adm": "<DIV STYLE=\"position: absolute; left: 0px; top: 0px; visibility: hidden;\">",
-        "cid": "17218906",
-        "crid": "16_100822737",
-        "adomain": ["slack.com"],
-        "w": 300,
-        "h": 250
-      },
-      "type": "banner"
-    }
-  ]
+  "expectedBids": []
 }

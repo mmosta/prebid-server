@@ -46,6 +46,6 @@
     }
   },
   "expectedMakeRequestsErrors": [
-    "All request.imp[i].ext.dmx.memberId params must both exist and match. Request contained: 2"
+    "All request.imp[i].ext.dmx.memberid params must both exist and match. Request contained: 2"
   ]
 }

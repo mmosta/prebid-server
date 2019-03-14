@@ -46,7 +46,7 @@ func (a *DmxAdapter) MakeRequests(request *openrtb.BidRequest) ([]*adapters.Requ
 	}
 
 	if len(publisherIds) != 1 {
-		errs = append(errs, fmt.Errorf("All request.imp[i].ext.dmx.memberId params must both exist and match. Request contained: %v", len(publisherIds)))
+		errs = append(errs, fmt.Errorf("All request.imp[i].ext.dmx.memberid params must both exist and match. Request contained: %v", len(publisherIds)))
 		return nil, errs
 	}
 
@@ -97,7 +97,7 @@ func (a *DmxAdapter) MakeBids(internalRequest *openrtb.BidRequest, externalReque
 
 	if response.StatusCode == http.StatusBadRequest {
 		return nil, []error{&errortypes.BadInput{
-			Message: fmt.Sprintf("Unexpected status code: %d. ", response.StatusCode),
+			Message: fmt.Sprintf("Unexpected status code: %d. Please ensure input parameters are correct for your account", response.StatusCode),
 		}}
 	}
 
@@ -110,7 +110,7 @@ func (a *DmxAdapter) MakeBids(internalRequest *openrtb.BidRequest, externalReque
 	var bidResp openrtb.BidResponse
 	if err := json.Unmarshal(response.Body, &bidResp); err != nil {
 		return nil, []error{&errortypes.BadServerResponse{
-			Message: fmt.Sprintf("bad server response: %d. ", err),
+			Message: fmt.Sprintf("bad server response: unable to parse body"),
 		}}
 	}
 
@@ -170,7 +170,7 @@ func preprocess(imp *openrtb.Imp) (string, error) {
 
 	if dmxExt.MemberID == 0 {
 		return "", &errortypes.BadInput{
-			Message: "ext.dmx.memberId is missing",
+			Message: "ext.dmx.memberid is missing",
 		}
 	}
 

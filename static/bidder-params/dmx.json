@@ -6,11 +6,11 @@
   "properties": {
     "memberid": {
       "type": "integer",
-      "description": "An ID which identifies the publisher selling the impression"
+      "description": "Required, an ID which identifies the publisher selling the impression"
     },
     "dmxid": {
       "type": "integer",
-      "description": "A district m tag ID"
+      "description": "Optional district m tag ID, required only for deal targeting"
     }
   },
   "required": [
